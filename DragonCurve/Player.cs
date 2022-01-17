@@ -21,7 +21,6 @@ public class Player : Node2D
 
     public override void _Ready()
     {
-        GD.Print("Initiating");
         points.Add(Tuple.Create(new Vector2(origin-size/2f, origin-size/2f), new Vector2(origin+size/2f, origin-size/2f)));
 
         Unfold(depth, 90f);
@@ -36,7 +35,6 @@ public class Player : Node2D
 
     void Unfold(int depth, float angle)
     {
-        GD.Print(points.Count);
         if (depth == 0) return;
 
         List<Tuple<Vector2, Vector2>> newDragon = new List<Tuple<Vector2, Vector2>>();
